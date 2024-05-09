@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Bellefair&display=swap');
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('../image/Cornwall.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+}
+
+.window {
+  background-color: #f1f1f1;
+  width: 90%;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+.header {
+  background-color: #ddd;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  justify-content: flex-start;
+  flex-grow: 1;
+}
+
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  display: inline;
+  margin-right: 20px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.menu a:hover {
+  color: #555;
+}
+
+.login-signup {
+  margin-left: auto;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.box {
+  width: 48%;
+  background-color: #fff;
+  margin-bottom: 30px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.box h2 {
+  margin: 0;
+}
+
+.box img {
+  width: 100%;
+  height: auto;
+}
