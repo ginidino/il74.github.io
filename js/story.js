@@ -47,23 +47,30 @@ function editStory(index) {
 function displayStories() {
     var storiesList = JSON.parse(localStorage.getItem("stories")) || [];
     var storiesHTML = "";
-    storiesList.forEach(function(story, index) {
-        storiesHTML += "<div class='story' id='story-" + index + "' data-category='" + story.category + "'>" +
-                   "<h2>" + story.title + "</h2>" +
-                   "<p>" + story.content + "</p>" +
-                   "<p><strong>Category:</strong> " + story.category + "</p>" +
-                   "<button class='edit-btn' onclick='editStory(" + index + ")'>Edit</button>" +
-                   "<button class='delete-btn' onclick='deleteStory(" + index + ")'>Delete</button>";
 
+    if (storiesList.length === 0) {
+        document.querySelector(".stories-window").style.display = "none";
+    } else {
+        document.querySelector(".stories-window").style.display = "block";
 
-        if (story.image) {
-            storiesHTML += "<p>Image Selected</p>";
-        } else {
-            storiesHTML += "<div class='no-image'></div>";
-        }
+        storiesList.forEach(function (story, index) {
+            storiesHTML += "<div class='story' id='story-" + index + "' data-category='" + story.category + "'>" +
+                "<h2>" + story.title + "</h2>" +
+                "<p>" + story.content + "</p>" +
+                "<p><strong>Category:</strong> " + story.category + "</p>" +
+                "<button class='edit-btn' onclick='editStory(" + index + ")'>Edit</button>" +
+                "<button class='delete-btn' onclick='deleteStory(" + index + ")'>Delete</button>";
 
-        storiesHTML += "</div>";
-    });
+            if (story.image) {
+                storiesHTML += "<p>Image Selected</p>";
+            } else {
+                storiesHTML += "<div class='no-image'></div>";
+            }
+
+            storiesHTML += "</div>";
+        });
+    }
+
     document.getElementById("storiesList").innerHTML = storiesHTML;
 }
 
@@ -83,5 +90,4 @@ document.getElementById("categoryList").addEventListener("change", function() {
             story.style.display = "none";
         }
     }
-    
 });
