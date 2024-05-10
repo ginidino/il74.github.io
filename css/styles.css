@@ -10,22 +10,12 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-image: url('../image/Cornwall.jpg');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  background-color: #ddd;
 }
 
 h1 {
   text-align: center;
-  color: white;
-}
-
-.window {
-  background-color: #f1f1f1;
-  width: 90%;
-  margin: 0 auto;
-  padding: 30px;
+  color: black;
 }
 
 .header {
@@ -74,18 +64,42 @@ h1 {
 }
 
 .box {
+  position: relative;
   width: 48%;
   background-color: #fff;
   margin-bottom: 30px;
   padding: 20px;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 .box h2 {
+  font-family: Verdana, sans-serif;
   margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  color: #fff;
+  transition: opacity 0.3s ease;
+  z-index: 1;
 }
 
 .box img {
+  top: 0;
+  left: 0;
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(100%);
+  transition: filter 0.3s ease;
+}
+
+.box:hover h2 {
+  opacity: 1;
+}
+
+.box:hover img {
+  filter: brightness(70%) blur(3px);
 }
