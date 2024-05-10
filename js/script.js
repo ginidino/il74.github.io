@@ -13,6 +13,12 @@ document.addEventListener('DOMContentLoaded', function() {
   if (storytellingBox) {
     storytellingBox.addEventListener('click', redirectToStorytelling);
   }
+
+  var boxes = document.querySelectorAll('.box');
+  boxes.forEach(function(box) {
+    box.addEventListener('mouseenter', showTextAndBlur);
+    box.addEventListener('mouseleave', hideTextAndBlur);
+  });
 });
 
 function hideBox() {
@@ -23,4 +29,16 @@ function hideBox() {
 
 function redirectToStorytelling() {
   window.location.href = 'storytelling.html';
+}
+
+function showTextAndBlur() {
+  var h2 = this.querySelector('h2');
+  h2.style.opacity = '1';
+  this.querySelector('img').style.filter = 'brightness(70%) blur(3px)';
+}
+
+function hideTextAndBlur() {
+  var h2 = this.querySelector('h2');
+  h2.style.opacity = '0';
+  this.querySelector('img').style.filter = 'brightness(100%) blur(0)';
 }
