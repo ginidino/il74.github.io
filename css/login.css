@@ -87,7 +87,7 @@ input, select, button {
   padding: 12px;
   border: 1px solid #cccccc;
   border-radius: 8px;
-  font-family: Arial, sans-serif; /* Changed font-family */
+  font-family: Arial, sans-serif;
 }
 
 button {
