@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Bellefair&display=swap');
-
 .container {
   width: 90%;
   margin: 0 auto;
@@ -16,8 +14,7 @@ body {
 h1 {
   text-align: center;
   color: black;
-  font-size: 24px; 
-  line-height: 1.5;
+  font-family: 'Bellefair', serif;
 }
 
 .header {
@@ -42,14 +39,13 @@ h1 {
 
 .menu li {
   display: inline;
-  margin-right: 10px;
+  margin-right: 20px;
 }
 
 .menu a {
   text-decoration: none;
   color: #333;
   font-weight: bold;
-  padding: 5px 10px;
 }
 
 .menu a:hover {
@@ -68,7 +64,7 @@ h1 {
 
 .box {
   position: relative;
-  width: 100%;
+  width: 48%;
   background-color: #fff;
   margin-bottom: 30px;
   padding: 20px;
@@ -87,8 +83,6 @@ h1 {
   color: #fff;
   transition: opacity 0.3s ease;
   z-index: 1;
-  font-size: 24px; 
-  line-height: 1.5;
 }
 
 .box img {
@@ -107,4 +101,28 @@ h1 {
 
 .box:hover img {
   filter: brightness(70%) blur(3px);
+}
+
+@media only screen and (max-width: 768px) {
+  .box {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .box {
+    width: 48%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .box {
+    width: 100%; 
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .box {
+    width: 48%; 
+  }
 }
