@@ -27,18 +27,18 @@ h1 {
 
 .menu {
   display: flex;
-  justify-content: flex-start;
-  flex-grow: 1;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .menu ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  display: flex;
 }
 
 .menu li {
-  display: inline;
   margin-right: 20px;
 }
 
@@ -50,6 +50,10 @@ h1 {
 
 .menu a:hover {
   color: #555;
+}
+
+.login-signup {
+  margin-left: auto;
 }
 
 .login-signup {
